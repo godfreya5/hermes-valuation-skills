@@ -175,7 +175,31 @@ tags: [估值, DCF, 现金流, PE, ROE, 投资]
 | 多元化 | SOTP 分部 | — | 整体PE |
 | 金融/保险 | PB | DDM | PE |
 | 破净/清算 | 重置成本 | PB | PE |
-| 高分红零增长 | DDM | PB | 高PE |YPE,EPSJB,EPSKCJB,BPS,MGWFPLR,PARENT_NETPROFIT&filter=(SECURITY_CODE="股票代码")&pageNumber=1&pageSize=8&sortColumns=REPORT_DATE&sortTypes=-1
+| 高分红零增长 | DDM | PB | 高PE |
+
+### 交叉验证铁律——不依赖单一方法
+
+**任何估值必须至少用两种方法，结论互相验证：**
+
+```
+主方法（最适合公司类型的）→ 出核心估值区间
+辅方法（次适合的）        → 出验证估值区间
+两者交叉 → 取重叠部分作为最终合理区间
+如果两种方法给出的区间完全不重叠 → 估值假设有问题，回去检查
+```
+
+**四大估值体系对照：**
+
+| 体系 | 方法 | 核心逻辑 | 国内常用度 |
+|------|------|---------|----------|
+| **市场法** | PE/PB/PS | 市场给同类公司多少倍 | 🔥 最常用 |
+| **收益法** | DCF/DDM/EVA | 未来能赚多少钱折现 | 🟡 机构用 |
+| **成本法** | 重置成本/清算 | 重建一家要花多少钱 | 🟡 破净/并购 |
+| **企业法** | 行业特定（产能/用户/储量） | 行业自己的估值语言 | 🟡 特定行业 |
+
+**国内现实**：市盈率法（PE）最常用。但 PE 也是**最容易被滥用的**——不管什么行业都拍一个 PE，是估值错误的最大来源。PE 只适用于盈利稳定的公司，周期股/亏损股/高杠杆股必须换方法。
+
+**正确姿势**：市场法（PE）做主 + 收益法（DCF）做验证 + 成本法（PB/重置成本）做底线。三重交叉，结论才站得住。YPE,EPSJB,EPSKCJB,BPS,MGWFPLR,PARENT_NETPROFIT&filter=(SECURITY_CODE="股票代码")&pageNumber=1&pageSize=8&sortColumns=REPORT_DATE&sortTypes=-1
 ```
 
 **关键动作：**
